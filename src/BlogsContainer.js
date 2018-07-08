@@ -27,7 +27,7 @@ class BlogsContainer extends Component {
 
   componentDidMount() {
     $.ajax({
-      url: "http://localhost:3000/api/v1/blogs",
+      url: "https://abhi-blogs-app.herokuapp.com/api/v1/blogs",
       type: "GET",
       context: this, // Allows us to use this.setState inside success
       success: function (result) {
