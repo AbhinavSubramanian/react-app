@@ -24,7 +24,7 @@
   },
   "proxy": {
     "/api": {
-      "target": "https://localhost:8000"
+      "target": "localhost:8000"
     }
   }
 }
