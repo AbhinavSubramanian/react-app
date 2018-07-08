@@ -1,10 +1,10 @@
-const express = require('express');
+const PORT = process.env.PORT || 8080;
 
-const app = express();
-const port = process.env.PORT || 5000;
+// Create a server, uses `handleRequest` which is function that takes
+// care of providing requested data
+const server = http.createServer(handleRequest);
 
-app.get('/api/v1/blogs', (req, res) => {
-  res.send({ express: 'Hello From Express' });
+// Start the server
+server.listen(PORT, () => {
+  console.log('Server listening on: http://localhost:%s', PORT);
 });
-
-app.listen(port, () => console.log(`Listening on port ${port}`));
