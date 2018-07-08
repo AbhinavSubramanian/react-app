@@ -43,7 +43,7 @@ class BlogsContainer extends Component {
 
   handleSubmit(title, body){
     $.ajax({
-      url: "http://localhost:3000/api/v1/blogs",
+      url: "https://abhi-blogs-app.herokuapp.com/api/v1/blogs",
       type: "POST",
       data: { blog: { title: title, body: body } },
       context: this, // Allows us to use this.setState inside success
@@ -57,14 +57,14 @@ class BlogsContainer extends Component {
 
   handleEdit(title, body, id){
     $.ajax({
-      url: `http://localhost:3000/api/v1/blogs/${id}`,
+      url: `https://abhi-blogs-app.herokuapp.com/api/v1/blogs/${id}`,
       type: "PUT",
       data: { blog: { title: title, body: body } },
       context: this, // Allows us to use this.setState inside success
       success: function (result) {
         console.log(result);
         $.ajax({
-          url: "http://localhost:3000/api/v1/blogs",
+          url: "https://abhi-blogs-app.herokuapp.com/api/v1/blogs",
           type: "GET",
           context: this, // Allows us to use this.setState inside success
           success: function (result) {
@@ -87,7 +87,7 @@ class BlogsContainer extends Component {
 
   handleDelete(id){
     $.ajax({
-      url: `http://localhost:3000/api/v1/blogs/${id}`,
+      url: `https://abhi-blogs-app.herokuapp.com/api/v1/blogs/${id}`,
       type: "DELETE",
       context: this, // Allows us to use this.setState inside success
       success: function (result) {
@@ -99,7 +99,7 @@ class BlogsContainer extends Component {
 
   handleShow(id){
     $.ajax({
-      url: `http://localhost:3000/api/v1/blogs/${id}`,
+      url: `https://abhi-blogs-app.herokuapp.com/api/v1/blogs/${id}`,
       type: "GET",
       context: this, // Allows us to use this.setState inside success
       success: function (result) {
