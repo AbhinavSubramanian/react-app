@@ -24,7 +24,7 @@
   },
   "proxy": {
     "/api": {
-      "target": "https://abhi-blogs-app.herokuapp.com/api/v1/blogs"
+      "target": "https://localhost:8000"
     }
   }
 }
